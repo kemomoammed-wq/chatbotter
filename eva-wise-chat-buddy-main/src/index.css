@@ -1,0 +1,316 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Eva Cosmetics Design System - Professional Beauty Interface */
+
+@layer base {
+  :root {
+    /* ChatGPT-like Colors */
+    --eva-primary: 217 91% 60%; /* ChatGPT blue */
+    --eva-primary-light: 217 91% 70%;
+    --eva-primary-dark: 217 91% 50%;
+    
+    --eva-secondary: 195 100% 50%;
+    --eva-secondary-light: 195 100% 65%;
+    
+    --eva-accent: 45 100% 60%;
+    --eva-success: 140 60% 45%;
+    --eva-warning: 35 100% 55%;
+    
+    /* ChatGPT-like Interface - Light Mode */
+    --chat-bg: 0 0% 100%;
+    --chat-surface: 0 0% 98%;
+    --chat-card: 0 0% 97%;
+    --chat-border: 0 0% 85%;
+    
+    --user-message: 217 91% 60%; /* ChatGPT blue */
+    --bot-message: 0 0% 97%; /* Light gray */
+    --system-message: 195 100% 50%;
+    
+    /* Text Colors */
+    --text-primary: 0 0% 9%;
+    --text-secondary: 0 0% 45%;
+    --text-muted: 0 0% 60%;
+    --text-accent: 217 91% 60%;
+    
+    /* Design System - Professional White */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 340 75% 45%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 45 100% 60%;
+    --accent-foreground: 0 0% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 340 75% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 340 75% 45%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 340 75% 45%;
+  }
+
+  /* ===== Eva Color Themes (15 presets) ===== */
+  /* كل ثيم يغير الألوان الأساسية فقط (accent / primary / user bubble) */
+
+  .theme-eva-default {
+    /* يستخدم قيم :root الافتراضية */
+  }
+
+  .theme-ocean {
+    --eva-primary: 199 89% 48%;
+    --eva-accent: 191 97% 44%;
+    --user-message: 199 89% 48%;
+  }
+
+  .theme-rose {
+    --eva-primary: 340 82% 52%;
+    --eva-accent: 343 92% 63%;
+    --user-message: 340 82% 52%;
+  }
+
+  .theme-emerald {
+    --eva-primary: 152 76% 40%;
+    --eva-accent: 145 65% 45%;
+    --user-message: 152 76% 40%;
+  }
+
+  .theme-gold {
+    --eva-primary: 43 96% 56%;
+    --eva-accent: 37 92% 55%;
+    --user-message: 43 96% 56%;
+  }
+
+  .theme-purple {
+    --eva-primary: 262 83% 58%;
+    --eva-accent: 274 82% 60%;
+    --user-message: 262 83% 58%;
+  }
+
+  .theme-teal {
+    --eva-primary: 174 72% 42%;
+    --eva-accent: 168 75% 47%;
+    --user-message: 174 72% 42%;
+  }
+
+  .theme-amber {
+    --eva-primary: 32 95% 55%;
+    --eva-accent: 38 92% 56%;
+    --user-message: 32 95% 55%;
+  }
+
+  .theme-pink {
+    --eva-primary: 330 81% 60%;
+    --eva-accent: 336 84% 67%;
+    --user-message: 330 81% 60%;
+  }
+
+  .theme-sky {
+    --eva-primary: 204 88% 53%;
+    --eva-accent: 201 96% 48%;
+    --user-message: 204 88% 53%;
+  }
+
+  .theme-lime {
+    --eva-primary: 84 81% 52%;
+    --eva-accent: 92 76% 50%;
+    --user-message: 84 81% 52%;
+  }
+
+  .theme-red {
+    --eva-primary: 0 84% 60%;
+    --eva-accent: 6 78% 57%;
+    --user-message: 0 84% 60%;
+  }
+
+  .theme-slate {
+    --eva-primary: 222 47% 31%;
+    --eva-accent: 215 20% 65%;
+    --user-message: 222 47% 31%;
+  }
+
+  .theme-mint {
+    --eva-primary: 163 75% 45%;
+    --eva-accent: 160 84% 39%;
+    --user-message: 163 75% 45%;
+  }
+
+  .theme-lavender {
+    --eva-primary: 252 94% 67%;
+    --eva-accent: 255 92% 76%;
+    --user-message: 252 94% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Markdown Styles for Chat Messages */
+@layer components {
+  .prose {
+    @apply text-text-primary;
+  }
+  
+  .prose code {
+    @apply bg-chat-card text-eva-accent px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+  
+  .prose pre {
+    @apply bg-chat-card border border-chat-border rounded-lg p-4 overflow-x-auto;
+  }
+  
+  .prose pre code {
+    @apply bg-transparent p-0;
+  }
+  
+  .prose a {
+    @apply text-eva-primary hover:text-eva-accent no-underline hover:underline inline-flex items-center gap-1;
+  }
+  
+  .prose ul, .prose ol {
+    @apply my-2;
+  }
+  
+  .prose li {
+    @apply my-1;
+  }
+  
+  .prose blockquote {
+    @apply border-l-4 border-eva-primary pl-4 italic my-2 text-text-secondary;
+  }
+  
+  .prose hr {
+    @apply border-chat-border my-4;
+  }
+  
+  /* Highlight.js theme - ChatGPT style */
+  .hljs {
+    @apply bg-[#282c34] text-gray-100;
+  }
+  
+  .hljs-comment,
+  .hljs-quote {
+    @apply text-gray-500 italic;
+  }
+  
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-built_in {
+    @apply text-[#c678dd];
+  }
+  
+  .hljs-string,
+  .hljs-title {
+    @apply text-[#98c379];
+  }
+  
+  .hljs-number {
+    @apply text-[#d19a66];
+  }
+  
+  .hljs-function {
+    @apply text-[#61afef];
+  }
+  
+  .hljs-variable {
+    @apply text-[#e06c75];
+  }
+  
+  /* ChatGPT-like scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-500;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Code block hover */
+  .group-code:hover .group-code-hover {
+    opacity: 1;
+  }
+}
